@@ -65,7 +65,7 @@ body{
 
 @keyframes boton-menu {
    0% { transform: scaleX(1.0);}
-   50% { transform: scaleX(1.15);}
+   50% { transform: scaleX(1.05);}
    100% { transform: scaleX(1.0);}   
 }
 
@@ -86,14 +86,10 @@ body{
    align-items: center; 
 } 
 
-.contenedor-principal p {
+.contenedor-principal h3 {
     display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;    
-
+    text-align: center;
+    font-size: 2vw;  
 }
 
 /*---------------------------------------------------------------------------------------------------*/
