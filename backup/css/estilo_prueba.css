@@ -2,30 +2,31 @@
 
 body{
     margin: 0px;
-    padding: 0px;
-    
+    padding: 0px;   
+     
 }
 
 .encabezado{
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #0b2551;
     color: #EEEEEE;
     padding: 10px;
+
     grid-area: encabezado;
 }
 
-/*.encabezado img {
+.encabezado img {
     width: 140px;
     margin: 0px 15px;
-}*/
+}
 
-/*.encabezado-centro h1 {
-    text-align: center;
+.encabezado-centro h1 {
     font-size: 3.5vw;
     font-family: "Kaisei Opti", serif;
-}*/
+}
 
 /*---------------------------------------------------------------------------------------------------*/
 /* Estilos del menú
@@ -163,7 +164,7 @@ iconos {
 
 
 
-.contenedor-pag-principal {
+/*.contenedor-pag-principal {
     display: grid;
     grid-template: repeat(2,auto) / 100% ;
     grid-template-areas: "encabezado"
@@ -173,7 +174,7 @@ iconos {
     grid-template-rows: "articulo-principal" 
                         "pie" ;
 
-} 
+} */
 
 
 
