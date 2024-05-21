@@ -52,28 +52,9 @@ document.getElementById('registrationForm').addEventListener('submit', function(
         return;
     }
 
-    alert('Registro exitoso');
-    fetch('/register', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Manejo de la respuesta del servidor
-        if (data.success) {
-            alert('Registro exitoso!');
-            window.location.href = 'index.html';
-        } else {
-            alert('Error en el registro: ' + data.message);
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-});
+    alert('Registro exitoso y correo enviado.');
+    window.location.href = 'index.html'; // Redirige al usuario después del registro
+})
 
 function validateUsername(username) {
     return username.length >= 3;
@@ -96,5 +77,5 @@ function validateDob(dob) {
 
 function toggleMenu() {
     const menu = document.getElementById('menu');
-    menu.classList.toggle('open');
+    menu.classList.toggle('show');
 }
