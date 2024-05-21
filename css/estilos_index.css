@@ -1,8 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-body{
-    margin: 0px;
-    padding: 0px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
 .encabezado{
@@ -10,54 +18,59 @@ body{
     justify-content: space-between;
     align-items: center;
     background-color: #0b2551;
-    color: #EEEEEE;
-    padding: 10px;
-
-    grid-area: encabezado;
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .encabezado img {
-    width: 140px;
-    margin: 0px 15px;
+    height: 50px;
 }
 
 .encabezado-centro h1 {
     font-size: 3.5vw;
-    font-family: "Kaisei Opti", serif;
 }
 
 /*---------------------------------------------------------------------------------------------------*/
 /* Estilos del menú
 /*---------------------------------------------------------------------------------------------------*/
 
-.menu {
-    background-color: #40679E;
-    color:#EEEEEE;
-    text-align: center;
-    grid-area: menu;
-    font-family: "Kaisei Opti", serif;
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    display: none;
 }
 
-.menu ul {
+nav {
+    position: relative;
+}
+
+
+#menu {
+    display: flex;
     list-style: none;
-    padding: 10px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
-.menu ul li {
-    display: inline-block;
+#menu li {
+    margin: 0 10px;
 }
 
-.menu li a {
-    color:#EEEEEE;
-    padding: 10px;
+#menu li a {
+    color: #0b2551;
     text-decoration: none;
     display: block;
+    padding: 10px 20px;
 }
 
-.menu li a:hover {
-    background-color: #0b2551;
+#menu li a:hover {
+    background-color: #90a8d3;
     animation: 0.5s infinite boton-menu;
+    border-radius: 4px;
 }
 
 @keyframes boton-menu {
@@ -66,123 +79,107 @@ body{
    100% { transform: scaleX(1.0);}   
 }
 
-/*---------------------------------------------------------------------------------------------------*/
-/* Estilos de los personajes
-/*---------------------------------------------------------------------------------------------------*/
-
-.contenedor-peronaje {
+main {
+    flex: 1;
     display: flex;
-    padding: 10px;
-    height: 360px;
-    overflow: hidden;   
-}
-
-
-.contenedor-peronaje div {
-    margin: 10px;
-}
-
-.contenedor-peronaje img {
-    height: 250px;
-}
-
-/*---------------------------------------------------------------------------------------------------*/
-/* Estilos del footer
-/*---------------------------------------------------------------------------------------------------*/
-
-.pie {
-    display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 0px 25px;
-    background-color: #0b2551;
-    color:#EEEEEE;
-    grid-area: pie;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
 }
 
-iconos {
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    display: grid;
+    gap: 15px;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    margin-top: 0;
+}
+
+.form-group {
     display: flex;
-    column-gap: 12px;
+    flex-direction: column;
 }
 
-.iconos a {
-    color: aliceblue;
-    font-size: 20px;
-}
-.articulo1 {
-    grid-area: articulo1;
+.form-group label {
+    margin-bottom: 5px;
+    color: #555;
 }
 
-.articulo2 {
-    grid-area: articulo2;
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
-
-/*---------------------------------------------------------------------------------------------------*/
-/* Estilos del contenedor grid para pantallas pequeñas
-/*---------------------------------------------------------------------------------------------------*/
-
-.contenedor {
-  display: grid; 
-  grid-template: repeat(5,auto) / 100% ;
-  grid-template-areas: "encabezado"
-                        "menu"
-                        "articulo1"
-                        "articulo2"
-                        "pie" ;
+.radio-group,
+.checkbox-group {
+    display: flex;
+    gap: 10px;
 }
 
-/*---------------------------------------------------------------------------------------------------*/
-/* Estilos del contenedor grid para pantallas small
-/*---------------------------------------------------------------------------------------------------*/
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
 
+button:hover {
+    background-color: #0b2551;
+}
 
-@media (min-width: 720px) {
-    .contenedor {
-        display: grid; 
-        grid-template: repeat(4,auto) / 50% 50% ;
-        grid-template-areas: "encabezado encabezado"
-                              "menu menu"
-                              "articulo1 articulo2"                              
-                              "pie pie" ;
-      }
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0b2551;
+    color: white;
+    width: 100%;
+}
 
-    .contenedor-peronaje {
-        height: 480px;
-        overflow: hidden;
-    } 
-    
-    .contenedor-peronaje div p {
-        font-size: 1.7vw;
-    } 
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
 
-    .encabezado-centro h1 {
-        font-size: 40px;
+.footer-icons a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-icons a:hover {
+    color: #ccc;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
     }
-}
-
-/*---------------------------------------------------------------------------------------------------*/
-/* Estilos del contenedor grid para pantallas medianas
-/*---------------------------------------------------------------------------------------------------*/
-
-
-@media (min-width: 920px) {
-
-    .contenedor-peronaje {
-        height: 480px;
-        overflow: hidden;
-    } 
-    
-    .contenedor-peronaje div p {
-        font-size: 1.6vw;
-    } 
-
-    .contenedor-peronaje img {
-        height: 350px;
-    }
-
-    .encabezado-centro h1 {
-        font-size: 50px;
-    }
-}
-
+}   
