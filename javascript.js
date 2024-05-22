@@ -108,3 +108,28 @@ function validateDob(dob) {
     const birthDate = new Date(dob);
     return birthDate < today;
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const passwordInput = document.getElementById('password');
+    const confirmPasswordInput = document.getElementById('confirmPassword');
+    const togglePasswordButton = document.getElementById('togglePassword');
+    const toggleConfirmPasswordButton = document.getElementById('toggleConfirmPassword');
+    const eyeIcon = document.getElementById('eyeIcon');
+    const eyeIconConfirm = document.getElementById('eyeIconConfirm');
+
+    togglePasswordButton.addEventListener('click', function () {
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+        eyeIcon.classList.toggle('fa-eye');
+        eyeIcon.classList.toggle('fa-eye-slash');
+    });
+
+    toggleConfirmPasswordButton.addEventListener('click', function () {
+        const type = confirmPasswordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        confirmPasswordInput.setAttribute('type', type);
+        eyeIconConfirm.classList.toggle('fa-eye');
+        eyeIconConfirm.classList.toggle('fa-eye-slash');
+    });
+});
+
+
