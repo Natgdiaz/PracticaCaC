@@ -1,225 +1,275 @@
-/* Reset CSS */
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-.header-container {
+.encabezado {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #007BFF;
-    padding: 10px 20px;
-    width: 100%;
-    max-width: 1200px;
+    padding: 10px;
+    background-color: #0b2551;
 }
 
-header img {
-    height: 50px;
+.encabezado img {
+    height: 20vh;
 }
 
-header h1 {
+.encabezado-centro h1 {
+    font-size: 3.5vw;
     color: white;
-    margin: 0;
 }
 
 nav {
-    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #333;
+    color: white;
 }
 
 .menu-toggle {
+    display: none;
+    padding: 10px;
     background: none;
     border: none;
-    font-size: 24px;
     color: white;
     cursor: pointer;
-    display: none;
 }
 
 #menu {
-    display: flex;
     list-style: none;
-    padding: 0;
+    display: flex;
+    justify-content: space-around;
     margin: 0;
+    padding: 0;
 }
 
-#menu li {
+nav ul li {
     margin: 0 10px;
 }
 
 #menu li a {
-    color: white;
     text-decoration: none;
-    display: block;
+    color: white;
     padding: 10px 20px;
+    display: block;
+    transition: background 0.3s, transform 0.3s;
 }
 
 #menu li a:hover {
-    background-color: #0056b3;
-    border-radius: 4px;
+    background: #555;
+    transform: scale(1.05);
 }
 
 main {
-    flex: 1;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #e0e0e0;
+}
+
+.carousel {
+    position: relative;
     width: 100%;
-    max-width: 1200px;
+    max-width: 20vw;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-control {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.carousel-control:focus {
+    outline: none;
+}
+
+.welcome-article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    background-color: white;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-article .text-container {
+    text-align: left;
+}
+
+.welcome-article .image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-article .welcome-image {
+    width: 100%;
+    max-width: 200px;
 }
 
 .form-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
     max-width: 600px;
-    display: grid;
-    gap: 15px;
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-    margin-top: 0;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 15px;
 }
 
 .form-group label {
+    display: block;
     margin-bottom: 5px;
-    color: #555;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="date"] {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.radio-group label,
+.checkbox-group label {
+    width: 100%;
+    box-sizing: border-box;  /* Asegura que padding y border no expandan el elemento más allá de 100% */
 }
 
 .radio-group,
 .checkbox-group {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
-button {
-    padding: 10px;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+button[type="submit"] {
+    display: block;
     width: 100%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-button:hover {
-    background-color: #0056b3;
+button[type="submit"]:hover {
+    background: #555;
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #0b2551;
+    background: #0b2551;
     color: white;
-    width: 100%;
+    padding: 10px;
+    text-align: center;
 }
 
 .footer-icons {
     display: flex;
     justify-content: center;
+    gap: 10px;
     margin-bottom: 10px;
 }
 
 .footer-icons a {
-    margin: 0 10px;
     color: white;
-    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s;
 }
 
 .footer-icons a:hover {
-    color: #ccc;
+    color: #ddd;
 }
 
-footer p {
-    margin: 0;
-    font-size: 14px;
-}
-
-/* Media Queries */
 @media (max-width: 768px) {
-    .header-container {
+    nav {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    nav {
-        width: 100%;
-    }
-
-    .menu-toggle {
+    nav .menu-toggle {
         display: block;
     }
 
-    #menu {
-        display: none;
+    nav #menu {
         flex-direction: column;
-        background-color: #007BFF;
+        display: none;
         width: 100%;
     }
 
-    #menu.open {
+    nav #menu.show {
         display: flex;
     }
 
-    #menu li {
-        margin: 0;
-        border-bottom: 1px solid #0056b3;
+    nav #menu li {
+        width: 100%;
     }
-    
-    #menu li a {
-        padding: 15px;
+
+    nav #menu li a {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .radio-group,
+    .checkbox-group {
+        flex-direction: column;
     }
 }
 
 @media (max-width: 480px) {
-    .header-container {
-        padding: 10px;
-    }
-
-    header img {
+    .encabezado img {
         height: 40px;
     }
 
-    header h1 {
-        font-size: 18px;
+    #menu li a {
+        padding: 10px 5px;
     }
 
-    button {
-        font-size: 14px;
+    .form-container {
+        padding: 15px;
     }
 
-    footer p {
-        font-size: 12px;
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"],
+    .form-group input[type="date"] {
+        padding: 10px;
     }
 }

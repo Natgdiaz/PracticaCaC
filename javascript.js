@@ -1,3 +1,37 @@
+
+document.addEventListener('DOMContentLoaded', () => {
+    const carouselInner = document.getElementById('carousel-inner');
+    const carouselItems = carouselInner.querySelectorAll('.carousel-item');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        const carouselItemWidth = carouselItems[0].offsetWidth;
+        const offset = -currentIndex * carouselItemWidth;
+        carouselInner.style.transform = `translateX(${offset}px)`;
+    }
+
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
+        updateCarousel();
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
+    });
+
+    // Initialize the carousel
+    updateCarousel();
+});
+
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+}
+
+
 document.getElementById('registrationForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -73,9 +107,4 @@ function validateDob(dob) {
     const today = new Date();
     const birthDate = new Date(dob);
     return birthDate < today;
-}
-
-function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('show');
 }
