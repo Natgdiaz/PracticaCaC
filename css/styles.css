@@ -156,6 +156,10 @@ main {
     max-width: 200px;
 }
 
+h2 {
+text-align: center;
+}
+
 .catalog {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
