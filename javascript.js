@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-/ Comentarios
+/*Comentarios*/
 const commentForm = document.getElementById('comment-form');
 const commentInput = document.getElementById('comment-input');
 const commentsContainer = document.getElementById('comments-container');
@@ -149,3 +149,4 @@ commentForm.addEventListener('submit', (event) => {
         commentInput.value = ""; // Limpiar el campo de texto
     }
 });
+
