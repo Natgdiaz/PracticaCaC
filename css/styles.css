@@ -1,0 +1,336 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #0b2551;
+}
+
+.encabezado img {
+    height: 20vh;
+}
+
+.encabezado-centro h1 {
+    font-size: 3.5vw;
+    color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    padding: 10px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#menu li a:hover {
+    background: #555;
+    transform: scale(1.05);
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e0e0e0;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 20vw;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-control {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.carousel-control:focus {
+    outline: none;
+}
+
+.welcome-article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-article .text-container {
+    text-align: left;
+}
+
+.welcome-article .image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-article .welcome-image {
+    width: 100%;
+    max-width: 200px;
+}
+
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    max-width: 1200px;
+    width: 100%;
+}
+.character-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.character-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.character-info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.character-name {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+.character-description {
+    font-size: 1rem;
+    color: #666;
+}
+
+.form-container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.toggle-password {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.fa-eye, .fa-eye-slash {
+    font-size: 1.2em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.radio-group label,
+.checkbox-group label {
+    width: 100%;
+    box-sizing: border-box;  /* Asegura que padding y border no expandan el elemento más allá de 100% */
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #555;
+}
+
+footer {
+    background: #0b2551;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-icons a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.footer-icons a:hover {
+    color: #ddd;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav .menu-toggle {
+        display: block;
+    }
+
+    nav #menu {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+    }
+
+    nav #menu.show {
+        display: flex;
+    }
+
+    nav #menu li {
+        width: 100%;
+    }
+
+    nav #menu li a {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .radio-group,
+    .checkbox-group {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .encabezado img {
+        height: 40px;
+    }
+
+    #menu li a {
+        padding: 10px 5px;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"],
+    .form-group input[type="date"] {
+        padding: 10px;
+    }
+}

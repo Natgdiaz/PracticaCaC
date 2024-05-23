@@ -60,7 +60,7 @@ body{
 
 .menu li a:hover {
     background-color: #0b2551;
-    animation: 0.5s infinite boton-menu;
+
 }
 
 @keyframes boton-menu {
@@ -116,25 +116,37 @@ body{
 /* Estilos del footer
 /*---------------------------------------------------------------------------------------------------*/
 
-.pie {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 25px;
+footer {
+    text-align: center;
+    padding:  20px;
     background-color: #0b2551;
-    color:#EEEEEE;
+    color: white;
+    width: 100%;
     grid-area: pie;
 }
 
-iconos {
+.footer-icons {
     display: flex;
-    column-gap: 12px;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
-.iconos a {
-    color: aliceblue;
-    font-size: 20px;
+.footer-icons a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
 }
+
+.footer-icons a:hover {
+    color: #ccc;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
 .articulo1 {
     grid-area: articulo1;
 }
