@@ -336,3 +336,50 @@ footer {
     }
 }
 
+
+#series {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .serie {
+    margin: 5px;
+    width: 250px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .serie img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .serie img:hover {
+    transform: scale(1.05);
+  }
+  
+  .serie figcaption {
+    font-family: Arial,sans-serif;
+    top: 0; /* Lo sitúa en la parte superior del contenedor */
+    left: 0; /* Lo sitúa en la parte izquierda del contenedor */
+    width: 100%; /* Ancho igual al 100% del contenedor */
+    height: 100%; /* Altura igual al 100% del contenedor */
+    background-color: rgba(107, 164, 243, 0.7); /* Cambia el color de fondo a celeste con opacidad */
+    color: rgb(11, 1, 1); /* Color de texto blanco */
+    padding: 10px; /* Añade espaciado interno  */
+    box-sizing: border-box; /* Incluye padding y border en el ancho y alto */
+    text-align: center;
+  }
+  
+  article {
+    font-family: Arial,sans-serif;
+    text-align: justify;
+    background: #f7f9fa;
+    padding: 0%;
+  
+  }
+

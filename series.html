@@ -3,31 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Series de Anime - Anime FanFest</title>
-  <link rel="shortcut icon" href="imagenes\logo.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-  <link rel="shortcut icon" href="img\animeicono.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="Javascript.js" defer></script>
+  <title>Series destacadas</title>
 </head>
+
+
 <body>
 
-  <header>
-    <h1>Series de Anime</h1>
-    <nav class="menu">
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <ul id="menu">
-          <li><a href="index.html">Página principal</a></li>
-          <li><a href="catalogo.html">Catálogo de personajes</a></li>
-          <li><a href="series.html">Series y música</a></li>
-          <li><a href="registro.html">Registro</a></li>
-          <li><a href="quienes.html">¿Quiénes somos?</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <main>
-    <h2>Series Destacadas</h2>
+  <header class="encabezado">
+    <div class="encabezado-izq">
+        <img src="./imagenes/logo.jpg" alt="logo de la pagina">
+    </div>
+    <div class="encabezado-centro">
+        <h1>Series destacadas y música</h1>
+    </div>
+    <div class="encabezado-der">
+        <img src="./imagenes/logo.jpg" alt="logo de la pagina">
+    </div>
+</header>
+<nav>
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <ul id="menu">
+      <li><a href="index.html">Página principal</a></li>
+      <li><a href="catalogo.html">Catálogo de personajes</a></li>
+      <li><a href="series.html">Series y música</a></li>
+      <li><a href="registro.html">Registro</a></li>
+      <li><a href="quienes.html">¿Quiénes somos?</a></li>
+  </ul>
+</nav>
 
+ <main>
     <section id="series">
       <div class="serie">
           <img src="imagenes\anime1.jpeg" alt="Serie 1">
@@ -56,52 +64,8 @@
       </div>
     </section>
   
-    <main>
-      <form id="anime-survey">
-          <div class="form-group">
-              <label for="question1">¿Te gusta ver anime?</label>
-              <div class="radio-group">
-                  <label><input type="radio" name="question1" value="si"> Sí</label>
-                  <label><input type="radio" name="question1" value="no"> No</label>
-                  <label><input type="radio" name="question1" value="masomenos"> Más o menos</label>
-              </div>
-          </div>
-          <div class="form-group">
-              <label for="question2">¿Has visto Naruto?</label>
-              <div class="radio-group">
-                  <label><input type="radio" name="question2" value="si"> Sí</label>
-                  <label><input type="radio" name="question2" value="no"> No</label>
-                  <label><input type="radio" name="question2" value="masomenos"> Más o menos</label>
-              </div>
-          </div>
-          <div class="form-group">
-              <label for="question3">¿Te gusta el género shonen?</label>
-              <div class="radio-group">
-                  <label><input type="radio" name="question3" value="si"> Sí</label>
-                  <label><input type="radio" name="question3" value="no"> No</label>
-                  <label><input type="radio" name="question3" value="masomenos"> Más o menos</label>
-              </div>
-          </div>
-          <div class="form-group">
-              <label for="question4">¿Has visto alguna película de Studio Ghibli?</label>
-              <div class="radio-group">
-                  <label><input type="radio" name="question4" value="si"> Sí</label>
-                  <label><input type="radio" name="question4" value="no"> No</label>
-                  <label><input type="radio" name="question4" value="masomenos"> Más o menos</label>
-              </div>
-          </div>
-          <div class="form-group">
-              <label for="question5">¿Te gustaría aprender japonés para entender mejor el anime?</label>
-              <div class="radio-group">
-                  <label><input type="radio" name="question5" value="si"> Sí</label>
-                  <label><input type="radio" name="question5" value="no"> No</label>
-                  <label><input type="radio" name="question5" value="masomenos"> Más o menos</label>
-              </div>
-          </div>
-          <button type="submit">Enviar Encuesta</button>
-      </form>
-  
-  
+  </main>
+   
   
   
     <section>
@@ -152,10 +116,6 @@ Te invitamos a sumergirte en la música de tus animes favoritos. Crea una lista 
 </div>
 </article>
   </section>
-
-
-
-
 
 
 
