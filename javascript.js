@@ -132,4 +132,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+/ Comentarios
+const commentForm = document.getElementById('comment-form');
+const commentInput = document.getElementById('comment-input');
+const commentsContainer = document.getElementById('comments-container');
 
+commentForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const commentText = commentInput.value;
+    
+    if (commentText.trim() !== "") {
+        const commentElement = document.createElement('div');
+        commentElement.classList.add('comment');
+        commentElement.innerText = commentText;
+        commentsContainer.appendChild(commentElement);
+        commentInput.value = ""; // Limpiar el campo de texto
+    }
+});
