@@ -7,18 +7,20 @@
   <link rel="shortcut icon" href="imagenes\logo.jpg" type="image/x-icon">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
   <link rel="shortcut icon" href="img\animeicono.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css\estilos_index.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <header>
     <h1>Series de Anime</h1>
     <nav class="menu">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="#series">Series y música</a></li>
-        <li><a href="catalago.html"> Catálogo de personajes</a></li>
-        <li><a href="registro.html">Registro</a></li>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul id="menu">
+          <li><a href="index.html">Página principal</a></li>
+          <li><a href="catalogo.html">Catálogo de personajes</a></li>
+          <li><a href="series.html">Series y música</a></li>
+          <li><a href="registro.html">Registro</a></li>
+          <li><a href="quienes.html">¿Quiénes somos?</a></li>
       </ul>
     </nav>
   </header>
@@ -53,7 +55,56 @@
         <figcaption>La historia de Black Clover nos pone en la piel de un joven llamado Asta, el cual quiere convertirse en el mago más grande del reino. Sin embargo, hay un inconveniente: ¡no puede usar magia! Por suerte, Asta recibe el grimorio trébol de cinco hojas, que le otorga el poder de la anti-magia.</figcaption>
       </div>
     </section>
-  <section>
+  
+    <main>
+      <form id="anime-survey">
+          <div class="form-group">
+              <label for="question1">¿Te gusta ver anime?</label>
+              <div class="radio-group">
+                  <label><input type="radio" name="question1" value="si"> Sí</label>
+                  <label><input type="radio" name="question1" value="no"> No</label>
+                  <label><input type="radio" name="question1" value="masomenos"> Más o menos</label>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="question2">¿Has visto Naruto?</label>
+              <div class="radio-group">
+                  <label><input type="radio" name="question2" value="si"> Sí</label>
+                  <label><input type="radio" name="question2" value="no"> No</label>
+                  <label><input type="radio" name="question2" value="masomenos"> Más o menos</label>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="question3">¿Te gusta el género shonen?</label>
+              <div class="radio-group">
+                  <label><input type="radio" name="question3" value="si"> Sí</label>
+                  <label><input type="radio" name="question3" value="no"> No</label>
+                  <label><input type="radio" name="question3" value="masomenos"> Más o menos</label>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="question4">¿Has visto alguna película de Studio Ghibli?</label>
+              <div class="radio-group">
+                  <label><input type="radio" name="question4" value="si"> Sí</label>
+                  <label><input type="radio" name="question4" value="no"> No</label>
+                  <label><input type="radio" name="question4" value="masomenos"> Más o menos</label>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="question5">¿Te gustaría aprender japonés para entender mejor el anime?</label>
+              <div class="radio-group">
+                  <label><input type="radio" name="question5" value="si"> Sí</label>
+                  <label><input type="radio" name="question5" value="no"> No</label>
+                  <label><input type="radio" name="question5" value="masomenos"> Más o menos</label>
+              </div>
+          </div>
+          <button type="submit">Enviar Encuesta</button>
+      </form>
+  
+  
+  
+  
+    <section>
 <article>
 
   <div>
@@ -101,6 +152,12 @@ Te invitamos a sumergirte en la música de tus animes favoritos. Crea una lista 
 </div>
 </article>
   </section>
+
+
+
+
+
+
 
   <footer class="pie">
 
