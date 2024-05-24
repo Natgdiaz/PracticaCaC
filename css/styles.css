@@ -526,3 +526,17 @@ footer {
     margin-bottom: 10px;
     background-color: #f9f9f9;
 }
+
+p {
+    text-align: justify;
+    margin: 0 1%; 
+}
+
+ul {
+    text-align: justify;
+    margin: 0 1%; 
+}
+
+ul li {
+    text-align: justify;
+}
