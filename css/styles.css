@@ -194,6 +194,11 @@ main.pagina-registro {
 
 h2 {
 text-align: center;
+transition: transform 0.3s ease-in-out;
+}
+
+h2:hover {
+    transform: scale(1.2); 
 }
 
 .catalog {
@@ -454,6 +459,7 @@ footer {
     padding: 0%;
   
   }
+  
 
   h4 {
     font-family: sans-serif;
@@ -533,6 +539,12 @@ footer {
     border-radius: 5px;
     margin-bottom: 10px;
     background-color: #f9f9f9;
+}
+
+.fondo-gris {
+    background-color: #f0f0f0; /* Color de fondo gris claro */
+    padding: 20px; /* Espacio interno para que no quede pegado al borde */
+    border-radius: 8px; /* Bordes redondeados (opcional) */
 }
 
 p {
