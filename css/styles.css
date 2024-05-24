@@ -194,11 +194,6 @@ main.pagina-registro {
 
 h2 {
 text-align: center;
-transition: transform 0.3s ease-in-out;
-}
-
-h2:hover {
-    transform: scale(1.2); 
 }
 
 .catalog {
