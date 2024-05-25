@@ -465,6 +465,13 @@ footer {
     }
     }
 
+    .cancion-iframe {
+        border-radius: 12px;
+        width: 100%;
+        height: 152px;
+        border: none; /* Reemplaza frameborder con border: none */
+    }
+    
 
 article {
     font-family: 'Montserrat', sans-serif;
