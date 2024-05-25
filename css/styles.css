@@ -196,6 +196,15 @@ h2 {
 text-align: center;
 }
 
+/* Estilos para los iframes de Spotify */
+.spotify-iframe {
+    border-radius: 12px;
+    border: none; 
+    width: 100%;
+    height: 152px;
+}
+
+
 .catalog {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -411,72 +420,73 @@ footer {
 
 #series {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .serie {
-    margin: 5px;
-    width: 250px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  .serie img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-  }
-  
-  .serie img:hover {
-    transform: scale(1.05);
-  }
-  
-  .serie figcaption {
-    font-family: Arial,sans-serif;
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    background-color: rgba(107, 164, 243, 0.7); 
-    color: rgb(11, 1, 1); 
-    padding: 8px; 
-    box-sizing: border-box; 
-    text-align: center;
-  }
-  
-  article {
+    #series {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .serie {
+        margin: 5px;
+        width: 250px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .serie img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+    
+    .serie img:hover {
+        transform: scale(1.05);
+    }
+    
+    .serie figcaption {
+        font-family: Arial,sans-serif;
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        background-color: rgba(107, 164, 243, 0.7); 
+        color: rgb(11, 1, 1); 
+        padding: 8px; 
+        box-sizing: border-box; 
+        text-align: center;
+    } 
+
+
+article {
     font-family: 'Montserrat', sans-serif;
     text-align: justify;
     background: #f7f9fa;
     padding: 0%;
-  
-  }
-  
+} 
 
-  h4 {
+h4 {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-size: 24px; 
     transition: transform 0.3s ease-in-out;
-  }
+}
 
-  h5 {
+h5 {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-size: 24px; 
     transition: transform 0.3s ease-in-out; 
-  }
+}
 
-  h4:hover {
+h4:hover {
     transform: scale(1.2); 
-  }
+}
 
-  h5:hover {
+h5:hover {
     transform: scale(1.2);
-  }
+}
 
 /* Estilos para la sección de comentarios */
 #comments-section {
