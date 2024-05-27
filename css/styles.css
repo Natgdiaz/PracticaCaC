@@ -425,6 +425,10 @@ footer {
         height: 25vw; /* Ajusta la altura del carrusel para dispositivos móviles */
     }
 
+    .catalog {
+        padding: 0;
+    }
+
     .radio-group,
     .checkbox-group {
         flex-direction: column;
@@ -450,6 +454,10 @@ footer {
 
     .form-container {
         padding: 15px;
+    }
+
+    .catalog {
+        padding: 0;
     }
 
     .form-group input[type="text"],
