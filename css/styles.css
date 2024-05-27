@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .encabezado, .banner, .titulo-pagina, .logo {
@@ -36,7 +37,7 @@ body {
     top: 50%; 
     left: 25%; 
     transform: translate(-50%, -50%); 
-    font-family:Cambria;
+   font-family:Cambria;
 }
 
 nav {
@@ -46,6 +47,7 @@ nav {
     padding: 10px;
     background: #3b226d;
     color: white;
+    flex-wrap: wrap;
 }
 
 .menu-toggle {
@@ -168,7 +170,7 @@ main.pagina-registro {
 
 
 .welcome-article {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     align-items: center;
@@ -176,6 +178,8 @@ main.pagina-registro {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .welcome-article .text-container {
@@ -187,23 +191,28 @@ main.pagina-registro {
     justify-content: center;
 }
 
-.welcome-article .welcome-image {
+.text-container {
+    flex: 1;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.image-container {
+    flex: 1;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.welcome-image {
     width: 100%;
-    max-width: 30vw;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 h2 {
 text-align: center;
 }
-
-/* Estilos para los iframes de Spotify */
-.spotify-iframe {
-    border-radius: 12px;
-    border: none; 
-    width: 100%;
-    height: 152px;
-}
-
 
 .catalog {
     display: grid;
@@ -213,6 +222,7 @@ text-align: center;
     max-width: 1200px;
     width: 100%;
     justify-content: center;
+    margin: 0 auto;
 }
 .character-card {
     background-color: #e1e5e8;
@@ -318,6 +328,24 @@ button[type="submit"]:hover {
     background: #555;
 }
 
+.map-container {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 (divide 9 by 16 = 0.5625) */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.iframe-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 footer {
     background: #3b226d;
     color: white;
@@ -348,12 +376,6 @@ footer {
 
 .footer-icons a:hover {
     color: #ddd;
-}
-
-.iframe-map {
-    width: 100%;
-    height: 600px;
-    border: 0;
 }
 
 @media (max-width: 768px) {
@@ -387,6 +409,16 @@ footer {
     nav #menu li a {
         padding: 10px;
         width: 100%;
+    }
+
+    .text-container, .image-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .welcome-article {
+        flex-direction: column;
+        text-align: center;
     }
 
     .radio-group,
@@ -426,81 +458,72 @@ footer {
 
 #series {
     display: flex;
-    #series {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .serie {
-        margin: 5px;
-        width: 250px;
-        border: 2px solid #ccc;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-    
-    .serie img {
-        width: 100%;
-        height: auto;
-        transition: transform 0.3s ease;
-    }
-    
-    .serie img:hover {
-        transform: scale(1.05);
-    }
-    
-    .serie figcaption {
-        font-family: Arial,sans-serif;
-        top: 0; 
-        left: 0; 
-        width: 100%; 
-        height: 100%; 
-        background-color: rgba(107, 164, 243, 0.7); 
-        color: rgb(11, 1, 1); 
-        padding: 8px; 
-        box-sizing: border-box; 
-        text-align: center;
-    }
-    }
-
-    .cancion-iframe {
-        border-radius: 12px;
-        width: 100%;
-        height: 152px;
-        border: none; /* Reemplaza frameborder con border: none */
-    }
-    
-
-article {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .serie {
+    margin: 5px;
+    width: 250px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .serie img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .serie img:hover {
+    transform: scale(1.05);
+  }
+  
+  .serie figcaption {
+    font-family: Arial,sans-serif;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(107, 164, 243, 0.7); 
+    color: rgb(11, 1, 1); 
+    padding: 8px; 
+    box-sizing: border-box; 
+    text-align: center;
+  }
+  
+  article {
     font-family: 'Montserrat', sans-serif;
     text-align: justify;
     background: #f7f9fa;
     padding: 0%;
-} 
+  
+  }
+  
 
-h4 {
+  h4 {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-size: 24px; 
     transition: transform 0.3s ease-in-out;
-}
+  }
 
-h5 {
+  h5 {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-size: 24px; 
     transition: transform 0.3s ease-in-out; 
-}
+  }
 
-h4:hover {
+  h4:hover {
     transform: scale(1.2); 
-}
+  }
 
-h5:hover {
+  h5:hover {
     transform: scale(1.2);
-}
+  }
 
 /* Estilos para la sección de comentarios */
 #comments-section {
@@ -540,6 +563,7 @@ h5:hover {
     background-color: #555;
     color: white;
     cursor: pointer;
+    
 }
 
 #comments-container {
