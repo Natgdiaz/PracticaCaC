@@ -219,6 +219,9 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    text-align: center;
+}
 /*------catalogo------*/
 
 .catalogo {
@@ -368,7 +371,7 @@ button[type="submit"]:hover {
 }*/
 
 .serie img {
-    width: 85%;
+    width: 90%;
     height: 50%;
     display: flex;
     justify-content: center;
@@ -390,7 +393,7 @@ button[type="submit"]:hover {
     font-family: Arial, sans-serif;
     top: 0; 
     left: 0; 
-    width: 85%; 
+    width: 90%; 
     height: 50%; 
     background-color: rgba(107, 164, 243, 0.7); 
     color: rgb(11, 1, 1); 
@@ -779,3 +782,108 @@ footer {
     max-width: 200px;
     max-height: 200px;
 }
+/* Estilos para todo el proyecto */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+#nexus-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#nexus-container .contenedor-centrado {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#nexus-container .logo-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-top: 120px;
+}
+
+#nexus-container .navbar {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    width: 100vw;
+    height: 100px;
+    background-color: #726389;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: fixed !important;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#nexus-container .logo-nav {
+    height: 80%;
+    overflow: hidden;
+    margin-left: 1em;
+}
+
+#nexus-container form {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #b7a0e6;
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#nexus-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#nexus-container input[type="text"],
+#nexus-container input[type="number"],
+#nexus-container input[type="file"],
+#nexus-container textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+#nexus-container button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#nexus-container button:hover {
+    background-color: #0056b3;
+}
+
+#nexus-container a {
+    padding: 8px;
+    margin: 4px;
+    background-color: #726389;
+    color: #1d1a39;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 85%;
+    font-weight: 800;
+}
+
+#nexus-container a:hover {
+    background-color: #1d1a39;
+    color: #fdab13;
+}
+
