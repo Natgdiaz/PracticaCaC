@@ -184,8 +184,13 @@ document.getElementById('foto-perfil').addEventListener('change', function(event
         imagenPreview.style.display = 'block'; // Muestra la imagen previa
     };
 
-    lector.readAsDataURL(archivo);
+    if (archivo) {
+        lector.readAsDataURL(archivo);
+    } else {
+        imagenPreview.style.display = 'none';
+    }
 });
+
 
 /*-----contraseña-----*/
 document.getElementById('alternarPassword').addEventListener('click', function () {
