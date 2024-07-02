@@ -111,7 +111,7 @@ catalogo = Catalogo(host='anadataengineer.mysql.pythonanywhere-services.com', us
 
 # Carpeta para guardar las imagenes
 # ruta_destino = './static/imagenes/'
-ruta_destino = '/home/anadataengineer/mysite/static/imágenes/'
+ruta_destino = '/home/anadataengineer/mysite/static/imagenes/'
 
 @app.route("/avatar", methods=["GET"])
 def listar_avatar():
