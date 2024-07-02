@@ -107,11 +107,11 @@ class Catalogo:
 # Cuerpo del programa
 #--------------------------------------------------------------------
 # Crear una instancia de la clase Catalogo
-catalogo = Catalogo(host='localhost', user='root', password='', database='nexus')
+catalogo = Catalogo(host='anadataengineer.mysql.pythonanywhere-services.com', user='anadataengineer', password='root12345', database='anadataengineer$nexus')
 
 # Carpeta para guardar las imagenes
 # ruta_destino = './static/imagenes/'
-ruta_destino = './static/imagenes/'
+ruta_destino = '/home/anadataengineer/mysite/static/imágenes/'
 
 @app.route("/avatar", methods=["GET"])
 def listar_avatar():

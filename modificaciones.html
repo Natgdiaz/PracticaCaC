@@ -74,7 +74,7 @@
     </div>
     </div>
     <script>
-        const URL = "http://127.0.0.1:5000";
+        const URL = "https://anadataengineer.pythonanywhere.com/";
         
         // Variables de estado para controlar la visibilidad y los datos del formulario
         let codigo = '';
@@ -131,7 +131,7 @@
                 const imagenActual = document.getElementById('imagen-actual');
 
                 if (imagen_url && !imagenSeleccionada) { // Verifica si imagen_url no está vacía y no se ha seleccionado una imagen
-                    imagenActual.src = './static/imagenes/' + imagen_url;
+                    imagenActual.src = 'https://www.pythonanywhere.com/user/anadataengineer/files/home/anadataengineer/mysite/static/imagenes/' + imagen_url;
 
                     imagenActual.style.display = 'block'; // Muestra la imagen actual
                 } else {
